@@ -1,6 +1,5 @@
 .itemBtn {
     width: 300px;
-    height: 111px;
     transform-origin: 100% 56px;
     transform: rotate(0deg);
     position: absolute;
@@ -29,11 +28,9 @@
 }
 .itemImg {
     position: absolute;
-    width: 111px;
-    height: 110px;
     transform: rotate(0deg);
-    border-radius: 50%;
     cursor: pointer;
+    z-index: 1;
 }
 .itemBtn:nth-child(1) > .itemImg {
     transform: rotate(-45deg);
@@ -57,29 +54,41 @@
     transform: rotate(-315deg);
 }
 .textList {
-    width: 50px;
-    height: 50px;
-    transform: rotate(0deg);
-    display: none;
+    width: 250px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #223867;
+    transform: rotate(0deg) translate(-59%, 230%);
 }
 .itemBtn:nth-child(1) >.textList {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-72%, -90%);
 }
 .itemBtn:nth-child(2) >.textList {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translate(17%, -150px);
 }
 .itemBtn:nth-child(3) >.textList {
-    transform: rotate(-135deg);
+    transform: rotate(-135deg) translate(100%, -100%);
 }
 .itemBtn:nth-child(4) >.textList {
-    transform: rotate(-180deg);
+    transform: rotate(-180deg) translate(118%, -66%);
 }
 .itemBtn:nth-child(5) >.textList {
-    transform: rotate(-225deg);
+    width: 200px;
+    transform: rotate(-225deg) translate(116%, 39%);
 }
 .itemBtn:nth-child(6) >.textList {
-    transform: rotate(-270deg);
+    transform: rotate(-270deg) translate(27%, 180px);
 }
 .itemBtn:nth-child(7) >.textList {
-    transform: rotate(-315deg);
+    width: 186px;
+    transform: rotate(-315deg) translate(-65%, 67px);
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
 }

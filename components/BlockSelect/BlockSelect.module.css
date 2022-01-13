@@ -5,6 +5,7 @@
 .container {
     margin: 0 auto;
     width: 1264px;
+    padding: 0 35px 0 35px;
     height: 100%;
     left: 327px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(224, 247, 252, 0.583333) 25.87%, #CAF2FA 100%);
@@ -32,10 +33,7 @@
 .wrapperChoice {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 90px 20px;
-}
-.wrapperChoiceBlock {
-    margin: 0 auto;
+    padding-bottom: 90px;
 }
 .choiceHeader {
     padding-top: 43px;
@@ -53,6 +51,7 @@
     padding-top: 23px;
     width: 300px;
     margin: 0 auto;
+    cursor: pointer;
 }
 .wrapDescription {
     display: flex;
@@ -81,14 +80,36 @@
     height: 100%;
     padding-bottom: 296px;
 }
-.btns {
-    top: 43%;
-    left: 26%;
-    position: absolute;
+.wraperHeaderDescrBtn {
+    display: flex;
 }
-
+.descrBtn {
+    color: #2A477D;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+.descrBtnSmall {
+    padding-left: 5px;
+    color: #028CA6;
+    font-family: Roboto, serif;
+    size:14px;
+    font-style: normal;
+    line-height: 21px;
+}
 .statusIng {
     border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    opacity: 0.7;
+}
+.Adult {
+    background: url("../../assets/img/heder/image 48.jpg") no-repeat;
+}
+.Kid{
+    background: url("../../assets/img/heder/image 49.jpg") no-repeat;
 }
 .headerStatus {
     font-family: Roboto, serif;
@@ -98,4 +119,5 @@
     line-height: 35px;
     text-align: center;
     color: #068CA6;
+    transform: translate(0px, -82px);
 }

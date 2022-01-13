@@ -3,21 +3,28 @@ import style from './BlockSelect.module.css'
 import imgAdult from '../../assets/img/heder/image 48.jpg';
 import imgKids from '../../assets/img/heder/image 49.jpg';
 import Buttons from "../Buttons/Buttons";
+import {useState} from "react";
 
 export default function BlockSelect(): JSX.Element {
+    const [toggleStatus, setToggleStatus] = useState<string>('Взрослый')
+    const bgStatus = toggleStatus === 'Взрослый'? `${style.statusIng} ${style.Adult}`:
+        `${style.statusIng} ${style.Kid}`
+
+    const onToggleStatus = (e:string):void => {
+        setToggleStatus(e)
+    }
 
     return(
         <div className={style.container}>
-
             <h1 className={style.header}>А вдруг СМА?</h1>
             <p className={style.description}>Выберите, кто Ваш пациент:</p>
-
             <div className={style.wrapperChoice}>
-
-                <div className={style.wrapperChoiceBlock}>
+                <div>
                     <h2 className={style.choiceHeader}> Взрослый </h2>
                     <div className={style.wrapImg}>
-                        <Image src={imgAdult} width={300} height={300} alt="Abult"/>
+                        <Image src={imgAdult} width={300} height={300} alt="Взрослый"
+                               onClick={(e) => onToggleStatus(e.currentTarget.alt)}
+                        />
                     </div>
                     <div className={style.wrapDescription}>
                         <p className={style.choiceDescription}>Менее тяжелые формы СМА могут возникать и
@@ -29,11 +36,12 @@ export default function BlockSelect(): JSX.Element {
                             может быть более коварным и трудным для распознавания.</p>
                     </div>
                 </div>
-
-                <div className={style.wrapperChoiceBlock}>
+                <div>
                     <h2 className={style.choiceHeader}> Ребенок </h2>
                     <div className={style.wrapImg}>
-                        <Image src={imgKids} width={300} height={300} alt="Kid"/>
+                        <Image src={imgKids} width={300} height={300} alt="Ребенок"
+                               onClick={(e) => onToggleStatus(e.currentTarget.alt)}
+                        />
                     </div>
                     <div className={style.wrapDescription}>
                         <p className={style.choiceDescription}>Ребенок, плохо удерживающий голову, когда ему придают
@@ -48,19 +56,18 @@ export default function BlockSelect(): JSX.Element {
                             дегенерации при прогрессировании заболевания</p>
                     </div>
                 </div>
-
             </div>
-
             <div className={style.wrapperBtn}>
-                <p>Сообщает ли один из ваших пациентов о следующих симптомах? <span>(нажмите на любую иконку и узнайте больше)</span>
-                </p>
+                <div className={style.wraperHeaderDescrBtn}>
+                    <p className={style.descrBtn}>Сообщает ли один из ваших пациентов о следующих симптомах?</p>
+                    <span className={style.descrBtnSmall}>(нажмите на любую иконку и узнайте больше)</span>
+                </div>
                 <div className={style.choiceStatus}>
-                    <Image className={style.statusIng} src={imgAdult} width={300} height={300} alt="status"/>
-                    <p className={style.headerStatus}>Взрослый</p>
+                    <div className={bgStatus}/>
+                    <p className={style.headerStatus}>{toggleStatus}</p>
                 </div>
                 <Buttons/>
             </div>
         </div>
     )
-
 }
