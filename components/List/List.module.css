@@ -1,0 +1,85 @@
+.itemBtn {
+    width: 300px;
+    height: 111px;
+    transform-origin: 100% 56px;
+    transform: rotate(0deg);
+    position: absolute;
+    list-style: none;
+}
+.itemBtn:nth-child(1) {
+    transform: rotate(45deg);
+}
+.itemBtn:nth-child(2) {
+    transform: rotate(90deg);
+}
+.itemBtn:nth-child(3) {
+    transform: rotate(135deg);
+}
+.itemBtn:nth-child(4) {
+    transform: rotate(180deg);
+}
+.itemBtn:nth-child(5) {
+    transform: rotate(225deg);
+}
+.itemBtn:nth-child(6) {
+    transform: rotate(270deg);
+}
+.itemBtn:nth-child(7) {
+    transform: rotate(315deg);
+}
+.itemImg {
+    position: absolute;
+    width: 111px;
+    height: 110px;
+    transform: rotate(0deg);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.itemBtn:nth-child(1) > .itemImg {
+    transform: rotate(-45deg);
+}
+.itemBtn:nth-child(2) > .itemImg {
+    transform: rotate(-90deg);
+}
+.itemBtn:nth-child(3) > .itemImg {
+    transform: rotate(-135deg);
+}
+.itemBtn:nth-child(4) > .itemImg {
+    transform: rotate(-180deg);
+}
+.itemBtn:nth-child(5) > .itemImg {
+    transform: rotate(-225deg);
+}
+.itemBtn:nth-child(6) > .itemImg {
+    transform: rotate(-270deg);
+}
+.itemBtn:nth-child(7) > .itemImg {
+    transform: rotate(-315deg);
+}
+.textList {
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    display: none;
+}
+.itemBtn:nth-child(1) >.textList {
+    transform: rotate(-45deg);
+}
+.itemBtn:nth-child(2) >.textList {
+    transform: rotate(-90deg);
+}
+.itemBtn:nth-child(3) >.textList {
+    transform: rotate(-135deg);
+}
+.itemBtn:nth-child(4) >.textList {
+    transform: rotate(-180deg);
+}
+.itemBtn:nth-child(5) >.textList {
+    transform: rotate(-225deg);
+}
+.itemBtn:nth-child(6) >.textList {
+    transform: rotate(-270deg);
+}
+.itemBtn:nth-child(7) >.textList {
+    transform: rotate(-315deg);
+}

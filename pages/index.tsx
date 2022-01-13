@@ -1,4 +1,4 @@
-import  SelectPatient from '../components/SelectPatients/SelectPatients'
+import  SelectPatient from '../components/BlockSelect/BlockSelect'
 import {NextPage} from "next";
 
 const  Home: NextPage =  () => {

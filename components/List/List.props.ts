@@ -1,4 +1,4 @@
 export default interface ListProps {
-    img: string,
+    img: StaticImageData
     text: string
 }
